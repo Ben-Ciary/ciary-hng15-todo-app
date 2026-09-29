@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.todo-container {
+  width: 92%;
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+
+.todo-container h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+  color: #111827;
+}
+
+.todo-container > p {
+  text-align: center;
+  color: #6b7280;
+  margin: 8px 0 25px;
+}
+
+/* Filter buttons */
+
+.todo-container > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.todo-container button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.todo-container button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Add task area */
+
+.todo-container > div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.todo-container input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: white;
+}
+
+.todo-container input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Attach file */
+
+.todo-container label {
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.todo-container label:hover {
+  background: #f3f4f6;
+}
+
+/* Selected file name */
+
+.todo-container span {
+  color: #374151;
+}
+
+/* Task list */
+
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-container li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.todo-container li:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.todo-container li span {
+  flex: 1;
+  text-align: left;
+}
+
+/* Checkbox */
+
+.todo-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* File link */
+
+.todo-container li a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.todo-container li a:hover {
+  text-decoration: underline;
+}
+
+/* Edit button */
+
+.todo-container li button:first-of-type {
+  background: #f59e0b;
+}
+
+.todo-container li button:first-of-type:hover {
+  background: #d97706;
+}
+
+/* Delete button */
+
+.todo-container li button:last-of-type {
+  background: #ef4444;
+}
+
+.todo-container li button:last-of-type:hover {
+  background: #dc2626;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .todo-container {
+    width: 94%;
+    margin: 20px auto;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .todo-container h1 {
+    font-size: 26px;
+  }
+
+  .todo-container > div:nth-of-type(2) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-container input[type="text"] {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .todo-container label {
+    text-align: center;
+  }
+
+  .todo-container > div:nth-of-type(2) button {
+    width: 100%;
+  }
+
+  .todo-container li {
+    flex-wrap: wrap;
+  }
+
+  .todo-container li span {
+    min-width: 150px;
+  }
+}
