@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8000/api";
-const SERVER_URL = "http://127.0.0.1:8000";
+const API_URL = "https://ciary-hng15-todo-backend.onrender.com/api";
+const SERVER_URL = "https://ciary-hng15-todo-backend.onrender.com";
 const STORAGE_KEY = "hng_todo_tasks";
 const PENDING_KEY = "hng_todo_pending_deletes";
 
